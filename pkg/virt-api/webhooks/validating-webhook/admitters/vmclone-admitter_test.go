@@ -362,7 +362,6 @@ var _ = Describe("Validating VirtualMachineClone Admitter", func() {
 			vmClone.Spec.Template.AnnotationFilters = []string{filter}
 			admitter.admitAndExpect(vmClone, expectAllowed)
 		}
-
 		DescribeTable("Should reject", func(filter string) {
 			testFilter(filter, false)
 		},
